@@ -1,7 +1,5 @@
 {
-  "buildCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build",
-  "outputDirectory": "public",
-  "framework": "laravel",
+  "framework": "nitro",
   "functions": {
     "api/index.php": {
       "runtime": "php@8.2"

@@ -71,17 +71,36 @@ zip -r portfolio-infinityfree.zip . \
 
 ### Step 5: Install Composer (Jika ZIP tanpa Vendor)
 
-Buat file `install.php`:
+**Opsi 1: Via Online PHP Shell (Rekomendasi)**
+
+1. Buka **https://www.w3schools.com/php/phptryit.asp?filename=tryphp_compiler**
+2. Copy paste kode ini:
+
 ```php
 <?php
-exec('composer install --no-dev --optimize-autoloader 2>&1', $output);
-echo "<pre>";
-print_r($output);
-echo "</pre>";
+echo "Starting composer install...<br>";
+system('cd /home/volXX_XX/epiz_XXXXXX/htdocs && composer install --no-dev --optimize-autoloader 2>&1');
+echo "Done!";
 ?>
 ```
 
-Akses: `https://rafael-portofolio.free.nf/install.php`
+3. Ganti `volXX_XX/epiz_XXXXXX` dengan path folder Anda (lihat di File Manager)
+4. Klik "Run"
+
+**Opsi 2: Via Cron Job di vPanel**
+
+1. Login ke vPanel InfinityFree
+2. Buka **Cron Jobs**
+3. Tambah cron job dengan command:
+```bash
+cd /home/volXX_XX/epiz_XXXXXX/htdocs && composer install --no-dev --optimize-autoloader
+```
+4. Set "Once" (sekali saja)
+5. Save dan tunggu 1-2 menit
+
+**Opsi 3: Upload Vendor Folder Langsung**
+
+Jika semua cara di atas tidak work, upload folder `vendor/` dari lokal ke hosting via FTP atau File Manager (bisa di-ZIP terpisah lalu extract).
 
 ### Step 6: Selesai! 🎉
 
@@ -116,6 +135,15 @@ Akses: **https://rafael-portofolio.free.nf**
 | Extract error | Pastikan file ZIP tidak corrupt, coba upload ulang |
 | Permission denied | (Opsional) Set permission 775 untuk folder database/, storage/, bootstrap/cache/ di File Manager |
 | 404 Not Found | Pastikan `.htaccess` ada di root folder |
+| "This connection is not private" | Gunakan HTTP (bukan HTTPS) untuk install.php, atau pakai Opsi 2/3 untuk install composer |
+
+---
+
+## 💡 Tips
+
+- **Selalu pilih Opsi A (dengan vendor)** jika tidak mau ribet dengan install composer
+- **File vendor bisa di-ZIP terpisah** kalau terlalu besar untuk satu ZIP
+- **Gunakan FTP client** (FileZilla) untuk upload lebih cepat daripada File Manager
 
 ---
 

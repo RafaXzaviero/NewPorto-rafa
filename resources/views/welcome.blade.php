@@ -318,15 +318,6 @@
                         <div class="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center">
                             <i class="fas fa-users text-brand-400 text-xl"></i>
                         </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white">Organisasi</h3>
-                            <p class="text-slate-400 text-sm">Pengalaman kepemimpinan dan kontribusi aktif saya</p>
-                        </div>
-                    </div>
-                    <a href="https://instagram.com/svrorafael_" target="_blank" class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium transition-colors">
-                        <i class="fab fa-instagram"></i> Lihat Kegiatan Organisasi Saya lainnya
-                    </a>
-                </div>
                 
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

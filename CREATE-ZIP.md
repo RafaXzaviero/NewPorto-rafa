@@ -70,6 +70,17 @@ zip -r portfolio-infinityfree.zip . \
    - `storage/`
    - `bootstrap/cache/`
 
+   **Cara Set Permission di InfinityFree File Manager:**
+   1. Buka **File Manager** di vPanel
+   2. Klik folder yang mau diubah (contoh: `database/`)
+   3. Klik tombol **"Permissions"** atau **"Chmod"** (biasanya icon kunci/gear)
+   4. Masukkan angka: **775**
+   5. Klik **"Change"** atau **"Save"**
+   6. Ulangi untuk folder `storage/` dan `bootstrap/cache/`
+
+   **Alternatif dengan FTP (jika pakai FTP client):**
+   - Klik kanan folder → **File Permissions** → masukkan **775**
+
 ### Step 5: Install Composer (Jika ZIP tanpa Vendor)
 
 Buat file `install.php`:

@@ -1,28 +1,29 @@
-# ✅ Upload Kegiatan Error - FIXED
+# TODO - Deploy ke InfinityFree dengan SQLite
 
-## Issues Found and Fixed:
+## Progress:
+- [ ] 1. Buat file database.sqlite
+- [ ] 2. Update konfigurasi .env untuk SQLite production
+- [ ] 3. Buat file .htaccess untuk shared hosting
+- [ ] 4. Update DEPLOYMENT-GUIDE.md dengan panduan InfinityFree
+- [ ] 5. Jalankan migrasi untuk SQLite
+- [ ] 6. Verifikasi konfigurasi
 
-### ✅ Issue 1: Broken Storage Symlink
-**Problem:** The `public/storage` symlink was pointing to `storage/framework/storage` instead of `storage/app/public`, causing uploaded images to not be accessible.
+## Langkah-langkah Deploy ke InfinityFree:
 
-**Fix:** Removed broken symlink and created correct symlink:
-```bash
-rm public/storage
-ln -s /Users/user/portfolio-rafael/storage/app/public public/storage
-```
+### Step 1: Persiapan Database SQLite
+- [ ] Buat file database/database.sqlite
+- [ ] Pastikan folder database writable (chmod 775)
 
-### ✅ Issue 2: Galleries Directory
-**Status:** Already exists with uploaded files
+### Step 2: Konfigurasi Environment
+- [ ] Update .env file:
+  - DB_CONNECTION=sqlite
+  - DB_DATABASE=database/database.sqlite
+  - APP_ENV=production
+  - APP_DEBUG=false
 
-### ✅ Issue 3: File Permissions  
-**Status:** Permissions are set correctly (775)
+### Step 3: Shared Hosting Setup
+- [ ] Buat .htaccess di root folder
+- [ ] Redirect semua traffic ke public/index.php
 
-## Verification:
-- `public/storage` → `/Users/user/portfolio-rafael/storage/app/public` ✅
-- `storage/app/public/galleries/` contains all uploaded files ✅
-- Profile image and kegiatan images are now accessible via URL
-
-## Testing:
-Try uploading a new kegiatan now. The upload should work and the image will be accessible at:
-`http://localhost/storage/galleries/filename.jpg`
-
+### Step 4: Dokumentasi
+- [ ] Update DEPLOYMENT-GUIDE.md dengan langkah-langkah InfinityFree

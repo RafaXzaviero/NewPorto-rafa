@@ -14,7 +14,7 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "https://your-project.vercel.app"
+    "APP_URL": "https://RafaelAlbionSavero.vercel.app"
   }
 }
 

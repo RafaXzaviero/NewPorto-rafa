@@ -18,13 +18,13 @@ Vercel sekarang support PHP/Laravel dengan gratis!
 ### Langkah 3: Configure Project
 
 ```
-Framework Preset: ⭐ LARAVEL (BUKAN Vite!)
+Framework Preset: ⭐ OTHER atau PHP
 Build Command: npm run build
 Output Directory: public
 Install Command: composer install && npm install
 ```
 
-⚠️ **PENTING:** Vite itu build tool, BUKAN framework. Pilih "Laravel" karena Laravel sudah include Vite!
+⚠️ **PENTING:** Laravel preset belum ada di Vercel, pilih **Other** atau **PHP**!
 
 ### Langkah 4: Environment Variables
 

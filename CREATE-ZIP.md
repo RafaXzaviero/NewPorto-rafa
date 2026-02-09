@@ -65,21 +65,9 @@ zip -r portfolio-infinityfree.zip . \
 1. **Login** ke https://infinityfree.net
 2. **File Manager** → **Upload** → pilih `portfolio-infinityfree.zip`
 3. **Extract** ZIP di File Manager
-4. **Set Permission 775** untuk folder:
-   - `database/`
-   - `storage/`
-   - `bootstrap/cache/`
+4. **Selesai!** Langsung akses website
 
-   **Cara Set Permission di InfinityFree File Manager:**
-   1. Buka **File Manager** di vPanel
-   2. Klik folder yang mau diubah (contoh: `database/`)
-   3. Klik tombol **"Permissions"** atau **"Chmod"** (biasanya icon kunci/gear)
-   4. Masukkan angka: **775**
-   5. Klik **"Change"** atau **"Save"**
-   6. Ulangi untuk folder `storage/` dan `bootstrap/cache/`
-
-   **Alternatif dengan FTP (jika pakai FTP client):**
-   - Klik kanan folder → **File Permissions** → masukkan **775**
+> **Note:** Jika ada error permission, bisa set permission 775 untuk folder `database/`, `storage/`, dan `bootstrap/cache/` di File Manager.
 
 ### Step 5: Install Composer (Jika ZIP tanpa Vendor)
 
@@ -126,7 +114,7 @@ Akses: **https://rafael-portofolio.free.nf**
 |-------|--------|
 | ZIP terlalu besar | Pilih opsi B (tanpa vendor), install composer di hosting |
 | Extract error | Pastikan file ZIP tidak corrupt, coba upload ulang |
-| Permission denied | Set permission 775 untuk database/, storage/, bootstrap/cache/ |
+| Permission denied | (Opsional) Set permission 775 untuk folder database/, storage/, bootstrap/cache/ di File Manager |
 | 404 Not Found | Pastikan `.htaccess` ada di root folder |
 
 ---

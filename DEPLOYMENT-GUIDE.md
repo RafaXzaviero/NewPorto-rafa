@@ -18,13 +18,13 @@ Vercel sekarang support PHP/Laravel dengan gratis!
 ### Langkah 3: Configure Project
 
 ```
-Framework Preset: ⭐ OTHER atau PHP
-Build Command: npm run build
-Output Directory: public
+Framework Preset: ⭐ NITRO atau OTHER
+Build Command: (biarkan kosong)
+Output Directory: (biarkan kosong)
 Install Command: composer install && npm install
 ```
 
-⚠️ **PENTING:** Laravel preset belum ada di Vercel, pilih **Other** atau **PHP**!
+⚠️ **PENTING:** Vercel tidak support Laravel langsung. Framework pilihan: **Nitro** atau **Other**!
 
 ### Langkah 4: Environment Variables
 
